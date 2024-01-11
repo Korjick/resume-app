@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      author: Bulat Din
+      id: mini_test
+      changes:
+        - createTable:
+            tableName: test
+            schemaName: resume
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+        - insert:
+            tableName: test
+            schemaName: resume
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: title
+                  value: 'Test1'
+        - insert:
+            tableName: test
+            schemaName: resume
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: title
+                  value: 'Test1'
